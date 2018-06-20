@@ -12,5 +12,8 @@ nutriunion.controller("indexController", ['$scope', '$http', '$cookies', functio
     };
     $scope.JumpToAngularHtml = function () {
         window.location.href = ROOT_URL+'app/demo1/angularDemo.php';
-        };
+    };
+    $scope.JumpToUIControlsHtml = function () {
+        window.location.href = ROOT_URL+'app/demo1/uicontrols.php';
+    };
 }]);
