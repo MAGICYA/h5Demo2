@@ -1,0 +1,31 @@
+
+/*删除浏览器这些默认值*/
+html,body,h1,h2,h3,h4,div,dl,dt,dd,ul,ol,li,p,pre,hr,table,th,td,form,input,button,textarea,menu,a,img{margin:0; padding:0;}
+/*默认字体，表示默认字体尺寸的62.5%，这样设置后1rem = 10px。浏览器的默认高度是16px。*/
+html {
+    font-size: 62.5%; /* 10÷16=62.5% */
+}
+/*移动端适配，css3的媒体查询@media，这种方法可以适配大部分机型*/
+@media only screen and (min-width: 481px){
+    html {
+        font-size: 94%!important; /* 15.04÷16=94% */
+    }
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 109%!important; /* 17.44÷16=109% */
+    }
+}
+@media only screen and (min-width: 641px){
+    html {
+        font-size: 125%!important; /* 20÷16=125% */
+    }
+}
+body{background:#f2f2f2;}
+
+/*Flexbox 弹性布局,Webkit 内核的浏览器，必须加上-webkit前缀.
+设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。
+flex container --- flex item*/
+.d-box{display:-webkit-box;}
+
+.fs-18{font-size:1.8rem;}

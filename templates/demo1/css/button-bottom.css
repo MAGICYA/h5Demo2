@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+body{background:url("../images/bg.jpg") no-repeat top center #000000;background-size:cover;}
+.contianer{width:100%;}
+/*头部 start*/
+.header{}
+/*头部 end*/
+
+/*内容 start*/
+.content{color: indianred;line-height: 50px;margin-bottom:50px;}
+/*内容 end*/
+
+
+/*可以设置位置*/
+footer{position:fixed;left:20px;bottom:20px;width:100%;height:50px;background-color: blue;}
+/*这样也可以置底*/
+footer{left:0;bottom:0;width:100%;height:50px;background-color: blue;}
+
+footer{position:fixed;left:0;bottom:0;width:100%;height:50px;background-color: blue;}
