@@ -24,6 +24,6 @@ if(!$smarty->isCached($template_path)) {
         $setCache = false;
     }
 }
-
+$smarty->clearCache($template_path);
 $smarty->display($template_path);
 ?>

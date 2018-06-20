@@ -9,7 +9,7 @@
     <meta name="author" content="Kelly">
     <title>首页</title>
     <link href="../../../static/css/basic.css?version=20171129-3" type="text/css" rel="stylesheet"/>
-    <link href="../../../templates/demo1/css/angularDemo.css?version=20171130-45" type="text/css" rel="stylesheet"/>
+    <link href="../../../templates/demo1/css/angularDemo.css?version=20171130-41" type="text/css" rel="stylesheet"/>
 
 </head>
 <body id="angularDemoController" ng-controller="angularDemoController">
@@ -17,11 +17,14 @@
     <div class="content">
         <div class = "demolist fs-8">
             <div class = "item " style="background-color: #f0c040">
-                ng-model/ng-bind
+                section1: ng-model/ng-bind
                 <p>姓名：<input type="text" ng-model="firstName"></p>
                 <p>你输入的姓名为:{{firstName}}</p>
                 <p>你输入的姓名为:<span ng-bind="firstName"></span></p>
-                <p>ng-bind与{{}}取值的区别:<br>
+                <p>ng-app 定义一个AngularJS 应用程序<br>
+                    ng-model 把元素值（如输入域的值）绑定到应用程序<br>
+                    ng-bind 把应用程序数据绑定到HTML视图<br>
+                    ng-bind与{c{}c}取值的区别:<br>
                     1.{c{ }c} 是等页面加载完后，再取值；<br>
                     2.ng-bind 它是在页面加载的时候，是不会显示{{name}}这种变量出来；<br>
                     3.ng-bind 可以解决 ng 页面闪烁加载问题；<br>
@@ -29,8 +32,41 @@
                 </p>
             </div>
             <div class = "item fs-8" style="background-color: #f011c0">
-                ng-repeat
+                section2: ng-repeat
                 <p class = "fs-8" ng-repeat="x in records">{{x}}</p>
+            </div>
+            <div class = "item fs-8" style="background-color: #f011c0">
+                section3: ng-click
+                <button style = "background-color: #f01110;" ng-click="btnDesc = 'hello, wly!'" ng-init="btnDesc = 'hello,'">OK
+                </button>
+                <p>step1 <span ng-bind="btnDesc"></span></p>
+                <p>step2</p>
+            </div>
+            <div class = "item fs-8" style="background-color: #f011c0">
+                section4: ng-hide
+                <button style = "background-color: #f01110;" ng-click="count = count + 1" ng-init="count = 0">隐藏
+                </button>
+                <p>账户余额1: <span ng-bind="count"></span>个亿</p>
+                <p ng-hide="count % 2 == 0 ">账户余额2: 1个亿</p>
+                <p>账户余额3: <span ng-bind="count"></span>个亿</p>
+
+            </div>
+            <div class = "item fs-8" >
+                section5: ng-disable
+                <button style = "background-color: #f01110;" ng-click="count2 = count2 + 1" ng-init="count2 = 0">隐藏
+                </button>
+                <p>账户余额1: <span ng-bind="count2"></span>个亿</p>
+                <button  ng-disabled="!count2 " ng-click="count3 = count3 + 1" ng-init="count3 = 0">提交<span ng-bind="count3"></span></button>
+                <button  ng-disabled="count2 % 2 == 0 " ng-click="count4 = count4 + 1" ng-init="count4 = 0">提交<span ng-bind="count4"></span></button>
+                <span  ng-disabled="count2 % 2 == 0 " ng-click="count5 = count5 + 1" ng-init="count5 = 0">提交<span ng-bind="count5"></span></span>
+                <span  ng-hide="count2 % 2 == 0 " ng-click="count6 = count6 + 1" ng-init="count6 = 0">提交<span ng-bind="count6"></span></span>
+                <button  ng-hide="count2 % 2 == 0 " ng-click="count7 = count7 + 1" ng-init="count7 = 0">提交<span ng-bind="count7"></span></button>
+                <p>账户余额3: <span ng-bind="count2"></span>个亿</p>
+            </div>
+            <div class = "item fs-8" >
+                section6: ng-class
+                <p ng-class = "{'redStyle':count61%2, 'greenStyle':!count61%2}" ng-click="count61 = count61 + 1" ng-init="count61 = 0">点击 {{count61}}</p>
+                <p class = "greenStyle" ng-click="count62 = count62 + 1" ng-init="count62 = 0">点击 {{count62}}</p>
             </div>
         </div>
     </div>
